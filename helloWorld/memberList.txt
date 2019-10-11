@@ -1,0 +1,11 @@
+Person0 20 Student
+Person1 20 Student
+Person2 20 Student
+Person3 20 Student
+Person4 20 Student
+Person5 20 Student
+Person6 20 Student
+Person7 20 Student
+Person8 20 Student
+Person9 20 Student
+Ekow 22 Great
