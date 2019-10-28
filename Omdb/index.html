@@ -1,0 +1,64 @@
+<html>
+
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+        <style>
+                ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+                div.card>* {
+                        opacity: 0.5;
+                        filter: alpha(opacity=10);
+                }
+
+                div.card>img {
+                        opacity: 1;
+                        
+                }
+                div.card>h3 {
+                        opacity: 1;
+                }
+
+                #myResults {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        color: white;
+                }
+
+                #background {
+                        width: 100vw;
+                        height: 100vh;
+                        background-image: url('BlackGarden.jpg');
+                        position: fixed;
+                        top: 0px;
+                        left: 0px;
+                        z-index: -10;
+                }
+        </style>
+</head>
+
+<body>
+        <div id="background"></div>
+        <nav class="navbar navbar-light bg-light">
+                        <a class="navbar-brand">The Great Movie Finder!</a>
+                        <form class="form-inline">
+                          <input id="mySearchBar" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                          <button id="myLookup" class="btn btn-outline-success my-2 my-sm-0" type="submit"  onclick=getMovieDetails()>Search</button>
+                        </form>
+                      </nav>
+                      <input id="mySearchBar" type="text" value="Enter Movie Name">
+        <button id="mLookup" type="button" name="myLookup" onclick=getMovieDetails()>Search</button>
+                      
+        <center>
+                <div id="myResults">
+
+                </div>
+        </center>
+
+        <script src=".\Scripts\search.js"></script>
+</body>
+
+</html>

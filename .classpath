@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="EkowAsanteAssessment/theInfiniteTerrainSystem/src"/>
+	<classpathentry kind="output" path="EkowAsanteAssessment/theInfiniteTerrainSystem/bin"/>
+</classpath>

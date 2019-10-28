@@ -1,0 +1,61 @@
+<head>
+    <title>Calculator!</title>
+
+    <style>
+        #header{
+            color: rgb(255, 255, 255);
+            z-index: 0;
+        }
+    #container{
+        
+        
+        border-width: 100px;
+    }
+    #mhistory{
+        background-color: cornsilk;
+        background-blend-mode: hard-light;
+        
+        text-align: center;
+    }
+    #background {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('matrix.jpg');
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: -10;
+        }
+    </style>
+</head>
+<body>
+        
+        <div id="background"></div>
+    <center><div id = 'container'>
+            <h1 id ="header"> Calculator!</h1>
+    <input id ="num1" type="text" value="2">
+    <input id ="num2" type="text" value="3">
+     <p></p>   
+
+ 
+    <button id ="add" type="button" name="Add" onclick="add()">Add(+)</button>
+    <button id ="sub" type="button" name="Sub"onclick="sub()">Subtract(-)</button>
+    <button id ="mult" type="button" name="Mult"onclick="mult()">Multiply(x)</button>
+    <button id ="div" type="button" name="Div"onclick="div()">Divide(/)</button>
+
+
+    <p id="output">0</p>
+    
+   
+
+    </div></center>
+
+    <div id = mhistory>
+            <h1 >History: </h1>
+    </div>
+
+    <script src="Calculate.js"></script>
+
+
+
+</body>
