@@ -1,0 +1,40 @@
+package com.qa.selenium.testing;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SeleniumTests {
+	WebDriver driver;
+	
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chromedriver.driver", "C:\\Users\\Admin\\Desktop\\chromedriver");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	@Test
+	public void testOne() throws InterruptedException {
+		System.out.println("test001");
+		driver.get("https://www.google.com");
+		Thread.sleep(2000);
+	}
+	@Test
+	public void testTwo()  {
+		System.out.println("test002");
+		driver.get("https://www.google.com");
+		WebElement website = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
+		website.sendKeys("Halloween");
+		WebElement submit =  driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
+		submit.submit();
+	}
+	@After
+	public void teardown() {
+		driver.close();
+	}
+
+}
