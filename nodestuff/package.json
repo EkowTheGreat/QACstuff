@@ -1,0 +1,13 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "main": "nodetest.js",
+  "scripts": {
+    "test": "echo/",
+    "start": "node nodetest.js"
+  },
+  "author": "ekowthegreat",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
