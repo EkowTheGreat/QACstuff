@@ -19,9 +19,26 @@
           font-size: 3.5rem;
         }
       }
+      #background {
+                        width: 100vw;
+                        height: 100vh;
+                        background-image: url('absbg.jpg');
+                        position: fixed;
+                        top: 0px;
+                        left: 0px;
+                        z-index: -10;
+      }
+      #recommended{
+        background-color: rgb(68, 66, 60);
+        background-blend-mode: hard-light;
+        
+        text-align: center;
+      }
     </style>
     </head>
     <body>
+        <div id="background"></div>
+        
     <link href="cover.css" rel="stylesheet">
   </head>
   <body class="text-center">
@@ -36,12 +53,13 @@
       </nav>
     </div>
   </header>     
-   
+  
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <h1 class="cover-heading">Your Recommendations.</h1>
+    <div id="recommended"></div>
+    
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+      <a  href="#" class="btn btn-lg btn-secondary" onclick="getRec()">Generate</a>
     </p>
   </main>
         <script src = "./recommendations.js"></script>
