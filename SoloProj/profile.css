@@ -1,0 +1,23 @@
+.card{
+    width: 600px;
+
+    
+}
+.masthead-brand{
+    
+}
+.profilecontainer{
+    text-decoration: aqua;
+    text-size-adjust: 10;
+    width: 600px;
+}
+.btn btn-lg btn-secondary{
+    text-decoration: aqua;
+    text-size-adjust: 5;
+}
+.main{
+    text-align: center;
+    position: fixed;;
+    padding-left: 42%;
+
+}

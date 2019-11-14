@@ -15,6 +15,7 @@ function getRec(){
     data.forEach(m => {
      let body = document.createElement('div');
      body.className ="card";
+     body.style="background-color: rgb(228, 138, 138)";
      let title = document.createElement('h2');
      let details = document.createElement('p');
     
@@ -25,10 +26,14 @@ function getRec(){
                  +"Release Date: "+m.releaseDate+"\n"
                  +"Genre: "+m.genre1+"\n";
                   body.appendChild(details);
-    
-    
-    
+                  let space = document.createElement('div');
+                  space.style = "height:25";
+                  
+                  //space.style = "  margin: 30px background-color: #ffffff border: 1px solid black opacity: 0.6 filter: alpha(opacity=60)";
      recommended.appendChild(body);
+     recommended.appendChild(space);
+    
+     
     
    
  });

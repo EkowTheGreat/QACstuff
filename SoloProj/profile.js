@@ -1,42 +1,91 @@
 
-//let data;
+function getProf() {
+    fetch('http://localhost:8080/item/users/3', { method: 'GET' })
+        .then((response) => response.json())
+        .then((json) => adusname(json))
+        .catch(err => console.log(err));
 
-let recommended = document.getElementById("profile");
+    // fetch('http://localhost:8080/item/users/0', { method: 'GET' })
+    // .then((response) => response.json())
+    // .then((json) => adusname(json))
+    // .catch(err => console.log(err));
 
-function getProf(){
-     
-    fetch('http://localhost:8080/item/users', { method: 'GET' })
-    .then((response) => response.json())
-    .then((json) => printMembers(json))
-    .catch(err => console.log(err));
 }
- function printMembers(data){
-   
-    data.forEach(m => {
-     let body = document.createElement('div');
-     body.className ="card";
-     body.style="border: 2px solid black";
-     let title = document.createElement('h2');
-     let details = document.createElement('p');
-    
-   
-     title.innerText = "Username: "+m.username+"\n";
-     body.appendChild(title);
-     details.innerText = "Favourite Game: "+m.favourite_Game+"    "
-                 
-                 +"Genre: "+m.genre1+"    "
-                 +"Genre: "+m.genre2+"\n"
-                 +"platform: "+ m.platform+"\n";
-                  body.appendChild(details);
-    
-    
-                  let space = document.createElement('div');
-                  //space.style = "height:50";
-                  
-                  //space.style = "  margin: 30px background-color: #ffffff border: 1px solid black opacity: 0.6 filter: alpha(opacity=60)";
-     recommended.appendChild(body);
-     recommended.appendChild(space);
-    
-   
- });
+function adusname(data) {
+    let uname = document.getElementById("userName");
+    let pword = document.getElementById("password");
+    let fgame = document.getElementById("favgame");
+    let g1 = document.getElementById("genre1");
+    let g2 = document.getElementById("genre2");
+    let g3 = document.getElementById("genre3");
+    let plat = document.getElementById("platform");
+    uname.value = data.username;
+    pword.value = data.password;
+
+    if (data.favourite_Game != null) {
+        fgame.value = data.favourite_Game;
+    }
+    //fgame.value = data.favourite_Game != null ? data.favourite_Game : fgame.value;
+
+    if (data.genre1 != null) {
+        g1.value = data.genre1;
+    }
+    if (data.genre2 != null) {
+        g2.value = data.genre2;
+    }
+    if (data.genre3 != null) {
+        g3.value = data.genre3;
+    }
+    if (data.platform != null) {
+        plat.value = data.platform;
+    }
+
+
+}
+function saveProf() {
+
+    //alert("Profile Saved");
+    // fetch('http://localhost:8080/item/3', {
+    //     method: 'PUT',
+    //     //body: JSON.stringify({ password: 'sniperg' }),
+        
+    //     body: JSON.stringify(makeBody()),
+    //     headers: { 'Content-Type': 'application/json' }
+    // })
+    //     .then((response) => console.log(response))
+    //     .catch(err => console.log(err));
+
+
+    //location.reload();
+makeBody();
+
+}
+function makeBody() {
+    let uname = document.getElementById("userName");
+    let pword = document.getElementById("password");
+    let fgame = document.getElementById("favgame");
+    let g1 = document.getElementById("genre1");
+    let g2 = document.getElementById("genre2");
+    //let g3 = document.getElementById("genre3");
+    //let gtype = document.getElementById("gametype");
+    let plat = document.getElementById("platform");
+
+    const deets = {
+        username: uname.value,
+        password: pword.value,
+        favourite_Game: fgame.value,
+        genre1: g1.value,
+        genre2: g2.value,
+        //genre3: g3.value,
+        platform: plat.value,
+       // gametype: gtype.value
+    };
+
+  
+
+
+     console.log(deets);
+
+    return deets;
+
 }
