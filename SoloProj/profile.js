@@ -45,15 +45,15 @@ function adusname(data) {
 function saveProf() {
 
     //alert("Profile Saved");
-    // fetch('http://localhost:8080/item/3', {
-    //     method: 'PUT',
-    //     //body: JSON.stringify({ password: 'sniperg' }),
+    fetch('http://localhost:8080/item/3', {
+        method: 'PUT',
+        //body: JSON.stringify({ password: 'sniperg' }),
         
-    //     body: JSON.stringify(makeBody()),
-    //     headers: { 'Content-Type': 'application/json' }
-    // })
-    //     .then((response) => console.log(response))
-    //     .catch(err => console.log(err));
+        body: JSON.stringify(makeBody()),
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then((response) => console.log(response))
+        .catch(err => console.log(err));
 
 
     //location.reload();
@@ -66,8 +66,8 @@ function makeBody() {
     let fgame = document.getElementById("favgame");
     let g1 = document.getElementById("genre1");
     let g2 = document.getElementById("genre2");
-    //let g3 = document.getElementById("genre3");
-    //let gtype = document.getElementById("gametype");
+    let g3 = document.getElementById("genre3");
+    let gtype = document.getElementById("gametype");
     let plat = document.getElementById("platform");
 
     const deets = {
@@ -76,9 +76,9 @@ function makeBody() {
         favourite_Game: fgame.value,
         genre1: g1.value,
         genre2: g2.value,
-        //genre3: g3.value,
+        genre3: g3.value,
         platform: plat.value,
-       // gametype: gtype.value
+        gametype: gtype.value
     };
 
   
