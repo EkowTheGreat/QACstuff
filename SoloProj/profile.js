@@ -1,6 +1,7 @@
 
 function getProf() {
-    fetch('http://localhost:8080/item/users/3', { method: 'GET' })
+    let sendLocation = "http://localhost:8080/item/users/"+sessionStorage.id;
+    fetch(sendLocation, { method: 'GET' })
         .then((response) => response.json())
         .then((json) => adusname(json))
         .catch(err => console.log(err));
