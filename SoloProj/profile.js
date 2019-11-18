@@ -1,4 +1,18 @@
-
+function dipSesh(){
+    if(sessionStorage.id == null)
+    {
+        
+        document.getElementById("account").innerHTML = "login";
+        document.getElementById("account").href = "./login.html";
+    }
+    else{
+        
+        document.getElementById("account").innerHTML="My Profile";
+        document.getElementById("account").href = "./profile.html";
+    }
+    getProf();
+    
+}
 function getProf() {
     let sendLocation = "http://localhost:8080/item/users/"+sessionStorage.id;
     fetch(sendLocation, { method: 'GET' })

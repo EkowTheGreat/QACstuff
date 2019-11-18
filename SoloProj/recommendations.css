@@ -1,9 +1,143 @@
-.card{
-    width: 600px;
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  #background {
+                    width: 100vw;
+                    height: 100vh;
+                    background-image: url('BlackGarden.jpg');
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    z-index: -10;
+  }
+
+  
+ 
+  #recommended{
+    position: fixed;
+    top: 320px;
+    width: 45vw;
+                    height: 50vh;
+                    background: #8080809c
+                    
+                    
+                    
+  }
+  #recDetails{
+    position: fixed;
+    width: 23vw;
+                    height: 50vh;
+                    
+                    align-self: flex-end;
+                    background: #8080809c
+  }
+  #reCPicture{
+    position: fixed;
+   
+    width: 23vw;
+                    height: 50vh;
+                    text-align: center;
+                    
+  }
+  #gameImage{
+    width: 23vw;
+    height: 50vh;
     
-}
-.recommend{
     
-    width: 600px;
-}
+    position: relative;
+    
+    
+    
+  }
+  #gameShortInfo{
+    position: relative;
+    width: 20vw;
+    top: 200px;
+  }
+  #profileDisplay{
+    background-color: black;
+    color: #343a40;
+    
+    
+    position: relative;
+    text-align: center;
+
+
+width: 52vw;
+height: 140px;
+  }
+  #profileDisplayText{
+    position: relative;
+    top: 40;
+  }
+  #userOptions{
+    position: fixed;
+top: 320px;
+right: 10;
+width: 52vw;
+height: 50vh;
+background: #8080809c
+  }
+  #getInfo{
+    
+      width: 50vw;
+     
+      height: 300px;
+top: 50px;
+position: relative;
+text-align-last: center;
+  }
+  #gamePublisher{
+    position: fixed;
+    width: 25vw;
+    top: 300px;
+  }
+  #gameTitle{
+    background-color: black;
+    color: #343a40;
+    position: absolute;
+    width: 23vw;
+    height: 140px; 
+    text-align: center; 
+  }
+  #gameTitleText{
+    position: relative;
+    top: 40;
+  }
+  #getUserOptions{
+    position: relative;
+    
+  }
+  #detailsTagText{
+    width: 150px;
+  }
+  #rating{
+    width: 70px;
+  }
+  #releaseDate{
+    width: 150px;
+    
+
+  }
+  #navlogo {
+    background-image: url('finalogo.jpg');
+    width: 80vh;
+    position: relative;
+    align-self: center;
+
+  }
+
+  #headerCard {
+    background-color: black;
+  }

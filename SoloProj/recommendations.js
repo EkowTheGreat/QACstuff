@@ -1,11 +1,26 @@
-
-//let data;
-
 let recommended = document.getElementById("recommended");
-
+function dipSesh(){
+    if(sessionStorage.id == null)
+    {
+        
+        document.getElementById("account").innerHTML = "login";
+        document.getElementById("account").href = "./login.html";
+    }
+    else{
+        
+        document.getElementById("account").innerHTML="My Profile";
+        document.getElementById("account").href = "./profile.html";
+        document.getElementById("profileDisplayText").innerText=sessionStorage.username;
+    }
+    
+}
 function getRec(){
      
-    fetch('http://localhost:8080/item/games', { method: 'GET' })
+    fetch('http://localhost:8080/item/recommendations', { 
+        method: 'POST' ,
+        body: JSON.stringify({UserId: sessionStorage.id}),
+        headers: { 'Content-Type': 'application/json' }
+    })
     .then((response) => response.json())
     .then((json) => printMembers(json))
     .catch(err => console.log(err));
@@ -13,28 +28,37 @@ function getRec(){
  function printMembers(data){
    
     data.forEach(m => {
-     let body = document.createElement('div');
-     body.className ="card";
-     body.style="background-color: rgb(228, 138, 138)";
-     let title = document.createElement('h2');
-     let details = document.createElement('p');
-    
+     document.getElementById("gameTitleText").innerText = m.name;
+     document.getElementById("releaseDate").value = m.age;
+     document.getElementById("rating").value = m.releaseDate;
+     document.getElementById("publisher").value = m.publisher;
    
-     title.innerText = "Title: "+m.name+"\n";
-     body.appendChild(title);
-     details.innerText = "Rating: "+m.age+"\n"
-                 +"Release Date: "+m.releaseDate+"\n"
-                 +"Genre: "+m.genre1+"\n";
-                  body.appendChild(details);
-                  let space = document.createElement('div');
-                  space.style = "height:25";
-                  
-                  //space.style = "  margin: 30px background-color: #ffffff border: 1px solid black opacity: 0.6 filter: alpha(opacity=60)";
-     recommended.appendChild(body);
-     recommended.appendChild(space);
+     
+  
     
      
     
    
  });
+}
+function saveDetails(){
+    let genre1 = document.getElementById("genre1");
+    let genre2 = document.getElementById("genre2");
+    let genre3 = document.getElementById("genre3");
+    let platform = document.getElementById("platform");
+    let gametype = document.getElementById("gametype");
+    if (typeof(Storage) !== "undefined") {
+        
+          //sessionStorage.id = 0;
+          sessionStorage.genre1 = genre1.value;
+          sessionStorage.genre2 = genre2.value;
+          sessionStorage.genre3 = genre3.value;
+          sessionStorage.platform = platform.value;
+          sessionStorage.gametype = gametype.value;
+          
+        
+        //console.log(sessionStorage.genre1);
+    }
+getRec();
+
 }

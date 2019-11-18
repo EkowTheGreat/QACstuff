@@ -1,3 +1,17 @@
+function dipSesh(){
+    if(sessionStorage.id == null)
+    {
+        
+        document.getElementById("account").innerHTML = "login";
+        document.getElementById("account").href = "./login.html";
+    }
+    else{
+        
+        document.getElementById("account").innerHTML="My Profile";
+        document.getElementById("account").href = "./profile.html";
+    }
+    
+}
 function login(){
 
     let uname = document.getElementById("userName");

@@ -30,3 +30,17 @@ function register(){
         .then((response) => console.log(response))
         .catch(err => console.log(err));
 }
+function dipSesh(){
+    if(sessionStorage.id == null)
+    {
+        alert("login");
+        document.getElementById("account").innerHTML = "login";
+        document.getElementById("account").href = "./login.html";
+    }
+    else{
+        alert("hello "+sessionStorage.username);
+        document.getElementById("account").innerHTML="My Profile";
+        document.getElementById("account").href = "./profile.html";
+    }
+    
+}
