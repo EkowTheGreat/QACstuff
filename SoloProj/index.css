@@ -28,6 +28,9 @@
   #getInfo {
 
     position: relative;
+    align-items: center;
+    background-color: #8080809c;
+    top: 180px;
   }
 
   #tophover {
@@ -47,4 +50,7 @@
   }
   #headerCard{
     background-color: black;
+  }
+  #main{
+    align-self: center;
   }

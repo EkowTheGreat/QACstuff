@@ -75,6 +75,20 @@ function saveProf() {
 makeBody();
 
 }
+function deleteProf(){
+    
+    fetch('http://localhost:8080/item/1', { 
+        method: 'DELETE' ,
+        body: JSON.stringify({"id": sessionStorage.id}),
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then((response) => response.json())
+        .catch(err => console.log(err));
+
+        sessionStorage.clear();
+        
+
+}
 function makeBody() {
     let uname = document.getElementById("userName");
     let pword = document.getElementById("password");
