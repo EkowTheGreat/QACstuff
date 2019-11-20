@@ -1,0 +1,8 @@
+.locationSearchBox{
+    background-color: antiquewhite;
+    width: 400px;
+    border-color: black;
+    margin: auto;
+    text-align: -webkit-center;
+    height: 200px;
+}
