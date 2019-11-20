@@ -1,0 +1,15 @@
+<h1>location</h1>
+<p>Where: {{location.Place}}</p>
+<p>When: {{location.Time}}</p>
+<h1 *ngIf="location.x">{{location.y}}</h1>
+<div *ngFor="let en of location.testArray">
+  <h5>
+      Call Name: 
+  </h5>
+  <h4>{{en}}</h4>
+  
+</div>
+<app-second></app-second>
+<button (click)='onButtonClicked()'>Don't Click</button>
+<input placeholder='type somet' (keydown)='onKeyDown($event)'[value]=inputVal>  
+<app-second [comment]='inputVal' (buttonClicked)='onButtonClicked()'></app-second>
