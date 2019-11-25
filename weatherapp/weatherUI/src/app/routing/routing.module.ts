@@ -11,11 +11,16 @@ const routes = [
     component: LocationSearchComponent
   },
   {
+
     path: 'summary/:url',
     component: WeatherSummaryComponent
   },
   {
     path: 'today/:woeid',
+
+  
+   
+
     component: WeatherForTodayComponent
   }
 ];

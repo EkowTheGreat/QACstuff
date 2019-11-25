@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ActivatedRoute } from '@angular/router';
 import { MetaweatherService } from '../metaweather.service';
 import {MetaLocation} from '../metalocation.model';
 import {LocationWeather} from '../locationweather.model';
+
 
 
 
@@ -12,6 +14,7 @@ import {LocationWeather} from '../locationweather.model';
   styleUrls: ['./weather-summary.component.css']
 })
 export class WeatherSummaryComponent implements OnInit {
+
 
  
   public data: MetaLocation[];
@@ -48,5 +51,7 @@ export class WeatherSummaryComponent implements OnInit {
     
   }
   
+
+
 
 }

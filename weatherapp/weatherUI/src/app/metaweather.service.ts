@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Observable, from } from 'rxjs';
 import { MetaLocation } from './metalocation.model';
 import {LocationWeather} from './locationweather.model';
 import {map} from 'rxjs/operators'
 import { WeatherData } from './weatherdata.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +35,7 @@ export class MetaweatherService {
     link = link +id+"/"+year+"/"+month+"/"+day+"/";
     return this.http.get<WeatherData[]>(link)
     .pipe(map(x=> x));
+
   }
   
 }
