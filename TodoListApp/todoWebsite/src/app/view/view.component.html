@@ -1,0 +1,21 @@
+<div id="background">
+
+    </div>
+    <div class="pseudobody">
+        <form [formGroup]="form"  id="todoBoard">
+            <h1 id="title">The Empire's Dirty Todo List!</h1>
+            <div id="taskContainer">
+                <div class="task">
+                    <input id="inputTitle" placeholder="Order 66 from empire's API" class="formInput" formControlName="title">
+                    
+                </div>
+                <div class="task">
+                        <textarea id="textArea" rows="25" cols="100" class="formInput" formControlName="text"></textarea>
+                        
+                    </div>
+    
+            </div>
+            <button id="updateButton" class="actionButton" (click)="updateOrders()">Update</button>
+    
+        </form>
+    </div>

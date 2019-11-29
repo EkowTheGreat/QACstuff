@@ -1,0 +1,26 @@
+<header>
+    <div id="miniBg"></div>
+
+</header>
+<div id="background">
+
+</div>
+<div class="pseudobody">
+    <div id="todoBoard">
+        <h1 id="title">The Empire's Dirty Todo List!</h1>
+        <div id="taskContainer">
+            <div *ngFor="let dat of list">
+                <div class="task">
+                        
+                    <h3  id="taskTitle" (click)="toView(dat.id)" >{{dat.title}}</h3>
+                    <button id="deleteButton" class="actionButton" (click)="deleteById(dat.id)">Delete</button>
+                </div>
+                
+            </div>
+
+
+        </div>
+        <button id="newButton" class="actionButton" (click)="newOrder()">New Task</button>
+
+    </div>
+</div>

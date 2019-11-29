@@ -1,0 +1,72 @@
+#background{
+    
+    background-color: rgb(161, 161, 201) ;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    z-index: -10;
+    left: 0px;
+}
+
+.pseudobody{
+    text-align: -webkit-center;
+    #todoBoard{
+        position: relative;
+        text-align-last: center;
+        background-color: rgb(60, 60, 71) ;
+        width: 70%;
+        #title{
+            background-color: black;
+            color: beige;
+        }
+        #taskContainer{
+            align-items: center;
+            .task{
+                
+                align-content: center;
+                background-color: grey;
+                place-content: center;
+                #inputTitle{
+                    
+                    color: black;
+                    
+                    
+                    width: 55%;
+                }
+                #textArea{
+                    align-content: initial;
+                    
+                }
+                #deleteButton{
+                    background-color: red;
+                }
+            }
+        }
+        #updateButton{
+            background-image: url('download2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: green;
+            height: 75px;
+            width: 75px;
+            color: rgba(0, 0, 0, 0);
+        }
+        #updateButton:hover{
+            
+            background-color: green !important;
+            background-image: url();
+            color: black;
+        }
+    
+    }
+}
+
+#taskTitle{
+    width: 70vw;
+}
+.actionButton{
+    border: outset;
+    border-radius: 40px;
+    
+}
