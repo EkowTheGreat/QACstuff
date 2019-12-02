@@ -1,0 +1,18 @@
+<div class="background"></div>
+<div class="loginBox">
+    
+    <form [formGroup]="form" (ngSubmit)="handleSubmit()" id="loginDetailsBox">
+            <h1 class="text-wrapper">login</h1>
+        
+        <input placeholder="Username" class="formInput" formControlName='username'>
+        <div></div>
+        <input placeholder="Password" class="formInput" formControlName='password' type="password">
+        <p id="invPassMsg">Invalid Username or Password</p>
+        <div>
+            <button class="loginButton">login</button>
+        </div>
+
+    </form>
+
+
+</div>

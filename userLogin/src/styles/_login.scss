@@ -1,0 +1,98 @@
+$background-color: rgb(48, 66, 78);
+
+.background{
+    background-color: $background-color;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -5;
+    top: 0px;
+}
+.loginBox{
+    background-color: $background-color;
+    text-align: -webkit-center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    .ng-invalid {
+        background-color: rgb(253, 0, 0);
+        color: black ;
+
+    }
+    .ng-pristine{
+        background-color: rgb(110, 0, 253);
+        color: grey;
+    }
+    .ng-untouched{
+       
+        color: #dcdcdc ;
+    }
+    
+   
+    h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black !important;
+    }
+    .text-wrapper{
+        
+    @include myRotate;
+        font-style: oblique;
+        font-family: serif;
+    }
+    .formInput{
+        background-color: $background-color;
+        height: 5vh;
+        width: 30vw;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 200%;
+        margin: 3%;
+        border-radius: 60px;
+        border-color: grey;
+       
+        .ng-invalid {
+            background-color: rgb(253, 0, 0);
+            color: black !important;
+
+        }
+        
+      
+      
+    }
+    .loginButton{
+        @include myHover;
+        border-radius: 60px;
+        border-color: grey;
+        height: 5vh;
+        width: 30vw;
+        margin: 10%;
+        
+    }
+}
+.logintext{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#loginDetailsBox{
+    background-color: gainsboro;
+    width: 50vw;
+    height: 50vh;
+    padding: 5rem;
+    border-style: solid;
+    border-width: thick;
+    border-color: darkgrey;
+    padding-top: 100px;
+    margin-top: 10%;
+    border-radius: 60px;
+        border-color: grey;
+        .ng-pristine{
+            background-color: rgb(110, 0, 253);
+            color: grey;
+        }
+        .ng-untouched{
+            background-color: $background-color !important;
+            color: black ;
+        }
+        .ng-invalid {
+            background-color: rgb(253, 0, 0);
+            color: black;
+
+        }
+}

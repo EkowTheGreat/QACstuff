@@ -1,0 +1,18 @@
+
+
+
+@mixin myRotate {
+    transform: rotate(50deg);
+    
+    
+}
+@mixin myHover {
+    &:hover { cursor: pointer;
+        background-color: adjust-hue($color: #526574, $degrees: 0);
+        
+     }
+    
+    
+    
+}
+@import './styles/_login';
